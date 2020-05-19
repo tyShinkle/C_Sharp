@@ -77,14 +77,15 @@ namespace TicTacToeServer
                             //re read bytes ASAP if filled.
                             i = stream.Read(bytes, 0, bytes.Length);
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
-                            client.Close();
+                            i = 0;
                         }
   
                     }
 
-                    //Shut down connection
+                    //Shut down  stream and connection connection
+                    stream.Close();
                     client.Close();
 
                 }
@@ -92,6 +93,10 @@ namespace TicTacToeServer
             catch(SocketException e)
             {
                 Console.WriteLine("Socket Exception: {0}",e.Message);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
             }
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();

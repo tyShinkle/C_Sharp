@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tyler\\Desktop\\devPortfolio\\C#\\TicTacToe\\ServerSocket\\TicTacToeServer\\TicTacToeServer\\TicTacToeServer.csproj": {}
+    "C:\\Users\\Tyler\\Desktop\\devPortfolio\\C#\\TCPTestOne\\ServerSocket\\TicTacToeServer\\TicTacToeServer\\TicTacToeServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tyler\\Desktop\\devPortfolio\\C#\\TicTacToe\\ServerSocket\\TicTacToeServer\\TicTacToeServer\\TicTacToeServer.csproj": {
+    "C:\\Users\\Tyler\\Desktop\\devPortfolio\\C#\\TCPTestOne\\ServerSocket\\TicTacToeServer\\TicTacToeServer\\TicTacToeServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tyler\\Desktop\\devPortfolio\\C#\\TicTacToe\\ServerSocket\\TicTacToeServer\\TicTacToeServer\\TicTacToeServer.csproj",
+        "projectUniqueName": "C:\\Users\\Tyler\\Desktop\\devPortfolio\\C#\\TCPTestOne\\ServerSocket\\TicTacToeServer\\TicTacToeServer\\TicTacToeServer.csproj",
         "projectName": "TicTacToeServer",
-        "projectPath": "C:\\Users\\Tyler\\Desktop\\devPortfolio\\C#\\TicTacToe\\ServerSocket\\TicTacToeServer\\TicTacToeServer\\TicTacToeServer.csproj",
+        "projectPath": "C:\\Users\\Tyler\\Desktop\\devPortfolio\\C#\\TCPTestOne\\ServerSocket\\TicTacToeServer\\TicTacToeServer\\TicTacToeServer.csproj",
         "packagesPath": "C:\\Users\\Tyler\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tyler\\Desktop\\devPortfolio\\C#\\TicTacToe\\ServerSocket\\TicTacToeServer\\TicTacToeServer\\obj\\",
+        "outputPath": "C:\\Users\\Tyler\\Desktop\\devPortfolio\\C#\\TCPTestOne\\ServerSocket\\TicTacToeServer\\TicTacToeServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tyler\\AppData\\Roaming\\NuGet\\NuGet.Config",
