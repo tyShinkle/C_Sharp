@@ -74,9 +74,11 @@ namespace TicTacToeServer
                             //Write message...
                             Console.WriteLine(String.Format("Sent: {0}", data));
 
-                            //re read bytes ASAP if filled.
+                            //set i to next input stream from client .
                             i = stream.Read(bytes, 0, bytes.Length);
                         }
+                        // Once the client disconnects exit this loop and keep listening to start a new 
+                        // client, then a new stream.
                         catch (Exception)
                         {
                             i = 0;

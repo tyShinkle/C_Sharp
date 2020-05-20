@@ -24,6 +24,11 @@ namespace ClientSocket
         }
 
         //Send message.
+        /*
+         * This will write to our stream, and this gui's ctThread 
+         * will continue updating our form with what the server
+         * writes to the stream.
+        */
         private void send_Click(object sender, EventArgs e)
         {
             //attempt to encode our message and write it to our stream.
@@ -67,6 +72,12 @@ namespace ClientSocket
             }
         }
 
+        /*
+         * Once a thread is started (after the connection) this method 
+         * will continually read the stream and set it's instance of readData 
+         * to whatever the server returned. Finally it will place this text in 
+         * the response text box via msg();
+        */
         private void getMessage()
         {
             while (true)

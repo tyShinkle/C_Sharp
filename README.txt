@@ -1,7 +1,7 @@
 **C# Projects **
 
 
-	*TicTacToe
+	*TicTacToe (Postponed for chat server @ 5/19/20
 
 		Thoughts:
 	
@@ -17,7 +17,7 @@
 			Local option to play against friend on 
 		 	same device : guest option.
 
-	*TCPTestOne
+	*TCPTestOne (Finished, testing needed)
 
 		Description:
 
@@ -25,8 +25,20 @@
 			for requests (client) containing strings and
 			returns to the client the same string 
 			capitalized. A simple test of tcp implementation.
+	
+	*TCPChatRoom (Due 5/24/20)
 
-		ToDo:
+		Description:
 
-			Keep listening after initial client ends 
-			application.
+			A front end which writes a TCP stream
+			to a backend. The backend broadcasts it to every
+			other stream within a hashtable.
+
+		To Do:
+
+			Front end
+			log in / authentication
+			save conversations
+			friend list
+			encryption
+
