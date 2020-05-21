@@ -1,0 +1,9 @@
+C:\Users\Tyler\Desktop\devPortfolio\C#\TCPChatRoom\ChatClient\ChatClient\bin\Debug\ChatClient.exe.config
+C:\Users\Tyler\Desktop\devPortfolio\C#\TCPChatRoom\ChatClient\ChatClient\bin\Debug\ChatClient.exe
+C:\Users\Tyler\Desktop\devPortfolio\C#\TCPChatRoom\ChatClient\ChatClient\bin\Debug\ChatClient.pdb
+C:\Users\Tyler\Desktop\devPortfolio\C#\TCPChatRoom\ChatClient\ChatClient\obj\Debug\ChatClient.csprojAssemblyReference.cache
+C:\Users\Tyler\Desktop\devPortfolio\C#\TCPChatRoom\ChatClient\ChatClient\obj\Debug\ChatClient.Form1.resources
+C:\Users\Tyler\Desktop\devPortfolio\C#\TCPChatRoom\ChatClient\ChatClient\obj\Debug\ChatClient.Properties.Resources.resources
+C:\Users\Tyler\Desktop\devPortfolio\C#\TCPChatRoom\ChatClient\ChatClient\obj\Debug\ChatClient.csproj.GenerateResource.cache
+C:\Users\Tyler\Desktop\devPortfolio\C#\TCPChatRoom\ChatClient\ChatClient\obj\Debug\ChatClient.exe
+C:\Users\Tyler\Desktop\devPortfolio\C#\TCPChatRoom\ChatClient\ChatClient\obj\Debug\ChatClient.pdb

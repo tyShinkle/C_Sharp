@@ -14,17 +14,16 @@ namespace ChatServer
 
         static void Main(string[] args)
         {
+            int port = 8888;
+
             //host server on local machine port 13000.
-            TcpListener serverSocket = new TcpListener(IPAddress.Any,13000);
-            
-            //client socket
-            TcpClient clientSocket = default(TcpClient);
-            
-            //counter
-            int counter = 0;
+            TcpListener serverSocket = new TcpListener(IPAddress.Any, port);
 
             //start server
             serverSocket.Start();
+            
+            //counter
+            int counter = 0;
 
             //message
             Console.WriteLine("Chat server started...");
@@ -39,7 +38,7 @@ namespace ChatServer
 
                 //BLOCKING
                 //instantiate new client socket when signaled
-                clientSocket = serverSocket.AcceptTcpClient();
+                TcpClient clientSocket = serverSocket.AcceptTcpClient();
 
                 //byte array to hold data from client
                 byte[] bytesFrom = new byte[1024];
