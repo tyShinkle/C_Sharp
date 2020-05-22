@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Sockets;
 using System.Threading;
@@ -36,17 +30,17 @@ namespace ChatClient
             try
             {
                 //send message to conversation text
-                readData = "Connecting to server...";
+                readData = "Connected to server!";
                 msg();
 
                 //Connect to server
-                clientSocket.Connect("192.168.0.6", 13000);
+                clientSocket.Connect("192.168.0.6",13000);
 
                 //Setup stream
                 serverStream = clientSocket.GetStream();
 
                 //Convert name to bytes
-                byte[] outStream = Encoding.ASCII.GetBytes(nameText + "$");
+                byte[] outStream = Encoding.ASCII.GetBytes(nameText.Text + "$");
 
                 //write name to stream
                 serverStream.Write(outStream, 0, outStream.Length);
@@ -58,18 +52,19 @@ namespace ChatClient
                 Thread ctThread = new Thread(getMessage);
                 ctThread.Start();
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                MessageBox.Show("Could not connect to server!");
+                MessageBox.Show("Could not connect to server!\n"+ex.Message);
             }
         }
 
         //send message
         private void msgBtn_Click(object sender, EventArgs e)
         {
-            byte[] outStream = Encoding.ASCII.GetBytes(msgText + "$");
+            byte[] outStream = Encoding.ASCII.GetBytes(msgText.Text + "$");
             serverStream.Write(outStream, 0, outStream.Length);
             serverStream.Flush();
+            msgText.Text = "";
         }
 
         //get messages
@@ -77,28 +72,35 @@ namespace ChatClient
         {
             while (true)
             {
-                //set stream
-                serverStream = clientSocket.GetStream();
+                try
+                {
+                    //set stream
+                    serverStream = clientSocket.GetStream();
 
-                //set buffer and memory for incoming messages
-                int buffSize = 0;
-                byte[] inStream = new byte[1024];
-                buffSize = clientSocket.ReceiveBufferSize;
+                    //set buffer and memory for incoming messages
+                    byte[] inStream = new byte[1024];
 
-                //read in messages and post them to conversation.
-                serverStream.Read(inStream, 0, buffSize);
-                string returndata = System.Text.Encoding.ASCII.GetString(inStream);
-                readData = "" + returndata;
-                msg();
+                    //read in messages and post them to conversation.
+                    serverStream.Read(inStream, 0, inStream.Length);
+                    string returndata = Encoding.ASCII.GetString(inStream);
+                    readData = "" + returndata;
+                    msg();
+                }
+                catch (Exception)
+                {
+                    clientSocket.Close();
+                    break;
+                }
+
             }
         }
 
         private void msg()
         {
             //stream safety
-            if (this.InvokeRequired)
+            if (InvokeRequired)
             {
-                this.Invoke(new MethodInvoker(msg));
+                Invoke(new MethodInvoker(msg));
             }
             else
             {
