@@ -42,3 +42,19 @@
 			friend list
 			encryption
 
+	*WindowsDBTest
+
+		Description:
+
+			An application which accesses a database and 
+			loads a tables with data from said database.
+
+		To Do: 
+
+			10 x 3 text fields 
+			Data list
+			text field array 
+			next button 
+			clean code
+			clean interface
+
