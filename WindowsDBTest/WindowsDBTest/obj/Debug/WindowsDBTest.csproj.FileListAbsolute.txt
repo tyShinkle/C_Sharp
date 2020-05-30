@@ -2,8 +2,8 @@ C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\bin\Debug\Win
 C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\bin\Debug\WindowsDBTest.exe
 C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\bin\Debug\WindowsDBTest.pdb
 C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\WindowsDBTest.csprojAssemblyReference.cache
-C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\WindowsDBTest.Form1.resources
 C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\WindowsDBTest.Properties.Resources.resources
 C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\WindowsDBTest.csproj.GenerateResource.cache
 C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\WindowsDBTest.exe
 C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\WindowsDBTest.pdb
+C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\WindowsDBTest.MainForm.resources

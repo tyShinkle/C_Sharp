@@ -50,11 +50,13 @@
 			loads a tables with data from said database.
 
 		To Do: 
-
-			10 x 3 text fields 
-			Data list
-			text field array 
-			next button 
+			
+			add button 
+			delete button 
+			test 
+				input un and pw
+					receive id
+			next button / back button
 			clean code
 			clean interface
 
