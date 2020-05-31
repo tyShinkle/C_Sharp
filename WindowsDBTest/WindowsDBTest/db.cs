@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace WindowsDBTest
 {
@@ -56,22 +57,30 @@ namespace WindowsDBTest
         //add user
         public void AddUser(string name, string username, string password)
         {
-            //get connectoin string for our table
-            connString = ConnStringValue(name);
+            try
+            {
+                //get connectoin string for our table
+                connString = ConnStringValue(name);
 
-            //connect to server / db
-            conn = new SqlConnection(connString);
-            conn.Open();
+                //connect to server / db
+                conn = new SqlConnection(connString);
+                conn.Open();
 
-            //Set up command...
-            SqlCommand command = new SqlCommand("INSERT INTO userInfo (un,pw) VALUES (@username,@password)", conn);
-            command.Parameters.Add(new SqlParameter("@username", username));
-            command.Parameters.Add(new SqlParameter("@password", password));
+                //Set up command...
+                SqlCommand command = new SqlCommand("INSERT INTO userInfo (un,pw) VALUES (@username,@password)", conn);
+                command.Parameters.Add(new SqlParameter("@username", username));
+                command.Parameters.Add(new SqlParameter("@password", password));
 
-            //execute command
-            command.ExecuteNonQuery();
+                //execute command
+                command.ExecuteNonQuery();
 
-            conn.Close();
+                conn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Could not add user!");
+            }
+
         }
 
         //delete user based on id
@@ -120,5 +129,35 @@ namespace WindowsDBTest
                 searchResults.Add(u);
             }
         }
+
+        //search by un
+        public void attemptSearch(string un)
+        {
+            searchResults = new List<User>();
+
+            searchResults.Clear();
+
+            connString = ConnStringValue("users");
+
+            conn = new SqlConnection(connString);
+
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("SELECT * FROM userInfo WHERE un LIKE @un", conn);
+
+            command.Parameters.Add(new SqlParameter("@un", "%" + un + "%"));
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                User u = new User();
+                u.id = (int)reader["id"];
+                u.un = (string)reader["un"];
+                u.pw = (string)reader["pw"];
+                searchResults.Add(u);
+            }
+        }
+
     }
 }

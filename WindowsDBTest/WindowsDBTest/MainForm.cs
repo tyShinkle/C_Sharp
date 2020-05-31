@@ -121,6 +121,139 @@ namespace WindowsDBTest
             addForm.Show();
         }
 
+        
+        //delete user functions for each row
+        private void del1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUser(Int32.Parse(id1.Text));
+                loadBtn_Click(null, null);
+            }
+            catch
+            {
+                MessageBox.Show("Could not delete record!");
+            }
+
+        }
+        private void del2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUser(Int32.Parse(id2.Text));
+                loadBtn_Click(null, null);
+            }
+            catch
+            {
+                MessageBox.Show("Could not delete record!");
+            }
+
+        }
+        private void del3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUser(Int32.Parse(id3.Text));
+                loadBtn_Click(null, null);
+            }
+            catch
+            {
+                MessageBox.Show("Could not delete record!");
+            }
+
+        }
+        private void del4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUser(Int32.Parse(id4.Text));
+                loadBtn_Click(null, null);
+            }
+            catch
+            {
+                MessageBox.Show("Could not delete record!");
+            }
+
+        }
+        private void del5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUser(Int32.Parse(id5.Text));
+                loadBtn_Click(null, null);
+            }
+            catch
+            {
+                MessageBox.Show("Could not delete record!");
+            }
+
+        }
+        private void del6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUser(Int32.Parse(id6.Text));
+                loadBtn_Click(null, null);
+            }
+            catch
+            {
+                MessageBox.Show("Could not delete record!");
+            }
+
+        }
+        private void del7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUser(Int32.Parse(id7.Text));
+                loadBtn_Click(null, null);
+            }
+            catch
+            {
+                MessageBox.Show("Could not delete record!");
+            }
+
+        }
+        private void del8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUser(Int32.Parse(id8.Text));
+                loadBtn_Click(null, null);
+            }
+            catch
+            {
+                MessageBox.Show("Could not delete record!");
+            }
+
+        }
+        private void del9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUser(Int32.Parse(id9.Text));
+                loadBtn_Click(null, null);
+            }
+            catch
+            {
+                MessageBox.Show("Could not delete record!");
+            }
+
+        }
+        private void del10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.DeleteUser(Int32.Parse(id10.Text));
+                loadBtn_Click(null, null);
+            }
+            catch
+            {
+                MessageBox.Show("Could not delete record!");
+            }
+
+        }
+
         //search by user ID
         private void searchID_TextChanged(object sender, EventArgs e)
         {
@@ -140,77 +273,51 @@ namespace WindowsDBTest
                 return;
             }
         }
-        
-        //delete user functions for each row
-        private void del1_Click(object sender, EventArgs e)
-        {
-            db.DeleteUser(Int32.Parse(id1.Text));
-            loadBtn_Click(null, null);
-        }
-        private void del2_Click(object sender, EventArgs e)
-        {
-            db.DeleteUser(Int32.Parse(id2.Text));
-            loadBtn_Click(null, null);
-        }
 
-        private void del3_Click(object sender, EventArgs e)
-        {
-            db.DeleteUser(Int32.Parse(id3.Text));
-            loadBtn_Click(null, null);
-        }
-
-        private void del4_Click(object sender, EventArgs e)
-        {
-            db.DeleteUser(Int32.Parse(id4.Text));
-            loadBtn_Click(null, null);
-        }
-
-        private void del5_Click(object sender, EventArgs e)
-        {
-            db.DeleteUser(Int32.Parse(id5.Text));
-            loadBtn_Click(null, null);
-        }
-
-        private void del6_Click(object sender, EventArgs e)
-        {
-            db.DeleteUser(Int32.Parse(id6.Text));
-            loadBtn_Click(null, null);
-        }
-
-        private void del7_Click(object sender, EventArgs e)
-        {
-            db.DeleteUser(Int32.Parse(id7.Text));
-            loadBtn_Click(null, null);
-        }
-
-        private void del8_Click(object sender, EventArgs e)
-        {
-            db.DeleteUser(Int32.Parse(id8.Text));
-            loadBtn_Click(null, null);
-        }
-
-        private void del9_Click(object sender, EventArgs e)
-        {
-            db.DeleteUser(Int32.Parse(id9.Text));
-            loadBtn_Click(null, null);
-        }
-
-        private void del10_Click(object sender, EventArgs e)
-        {
-            db.DeleteUser(Int32.Parse(id10.Text));
-            loadBtn_Click(null, null);
-        }
-
+        //clear placeholder text and change color.
         private void searchID_Enter(object sender, EventArgs e)
         {
             searchID.Text = "";
             searchID.ForeColor = Color.Black;
         }
 
+        //revert placeholder and color
         private void searchID_Leave(object sender, EventArgs e)
         {
             searchID.Text = "ID";
             searchID.ForeColor = System.Drawing.SystemColors.ControlDark;
+        }
+        
+        //same for other search fields...
+        private void searchUN_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                db.attemptSearch(searchUN.Text);
+                DisplayData(db.searchResults);
+            }
+            catch
+            {
+                //clear text
+                for (int i = 0; i < 30; i++)
+                {
+                    textBoxes[i].Text = "";
+                }
+
+                return;
+            }
+        }
+
+        private void searchUN_Enter(object sender, EventArgs e)
+        {
+            searchUN.Text = "";
+            searchUN.ForeColor = Color.Black;
+        }
+
+        private void searchUN_Leave(object sender, EventArgs e)
+        {
+            searchUN.Text = "Username";
+            searchUN.ForeColor = System.Drawing.SystemColors.ControlDark;
         }
     }
 }

@@ -51,11 +51,13 @@
 
 		To Do: 
 			edit row buttons
-			un and pw search
+			error catching 
+			comments / decoupling
 			test 
 				input un and pw
 					receive id
 			next button / back button
 			clean code
 			clean interface
+			generic db class.
 
