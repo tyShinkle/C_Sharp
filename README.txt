@@ -50,9 +50,8 @@
 			loads a tables with data from said database.
 
 		To Do: 
-			
-			add button 
-			delete button 
+			edit row buttons
+			un and pw search
 			test 
 				input un and pw
 					receive id

@@ -17,21 +17,20 @@ namespace WindowsDBTest
         DB db = new DB();
         TextBox[] textBoxes = new TextBox[30];
 
-        //List<TextBox> textBoxes = new List<TextBox>();
-
+        //load form
         public MainForm()
         {
             InitializeComponent();
             GatherTextBoxes();
         }
 
-        private void loadBtn_Click(object sender, EventArgs e)
+        //load and data and call method to display it.
+        public void loadBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 db.LoadData("users");
-                DisplayData();
-                
+                DisplayData(db.users);
             }
             catch (Exception ex)
             {
@@ -42,16 +41,24 @@ namespace WindowsDBTest
 
         //Should only display 10 users and refernce the index within
         //the users list.
-        private void DisplayData()
+        private void DisplayData(List<User> list)
         {
-            for(int i = 0; i < 10 && i < db.users.Count(); i++)
+            //clear text
+            for (int i = 0; i < 30; i++)
             {
-                textBoxes[0+(i*3)].Text = db.users[i].id.ToString();
-                textBoxes[1+(i*3)].Text = db.users[i].un;
-                textBoxes[2+(i*3)].Text = db.users[i].pw;
+                textBoxes[i].Text = "";
+            }
+
+            //either fill all 10 rows or display all users.
+            for (int i = 0; i < 10 && i < list.Count(); i++)
+            {
+                textBoxes[0+(i*3)].Text = list[i].id.ToString();
+                textBoxes[1+(i*3)].Text = list[i].un;
+                textBoxes[2+(i*3)].Text = list[i].pw;
             }
         }
 
+        //place text boxes in array
         private void GatherTextBoxes()
         {
             //row 1
@@ -104,6 +111,106 @@ namespace WindowsDBTest
             textBoxes[28] = un10;
             textBoxes[29] = pw10;
 
+        }
+
+        //open form to add user
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            //create & show form
+            AddForm addForm = new AddForm(this);
+            addForm.Show();
+        }
+
+        //search by user ID
+        private void searchID_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                db.attemptSearch(Int32.Parse(searchID.Text));
+                DisplayData(db.searchResults);
+            }
+            catch
+            {
+                //clear text
+                for (int i = 0; i < 30; i++)
+                {
+                    textBoxes[i].Text = "";
+                }
+
+                return;
+            }
+        }
+        
+        //delete user functions for each row
+        private void del1_Click(object sender, EventArgs e)
+        {
+            db.DeleteUser(Int32.Parse(id1.Text));
+            loadBtn_Click(null, null);
+        }
+        private void del2_Click(object sender, EventArgs e)
+        {
+            db.DeleteUser(Int32.Parse(id2.Text));
+            loadBtn_Click(null, null);
+        }
+
+        private void del3_Click(object sender, EventArgs e)
+        {
+            db.DeleteUser(Int32.Parse(id3.Text));
+            loadBtn_Click(null, null);
+        }
+
+        private void del4_Click(object sender, EventArgs e)
+        {
+            db.DeleteUser(Int32.Parse(id4.Text));
+            loadBtn_Click(null, null);
+        }
+
+        private void del5_Click(object sender, EventArgs e)
+        {
+            db.DeleteUser(Int32.Parse(id5.Text));
+            loadBtn_Click(null, null);
+        }
+
+        private void del6_Click(object sender, EventArgs e)
+        {
+            db.DeleteUser(Int32.Parse(id6.Text));
+            loadBtn_Click(null, null);
+        }
+
+        private void del7_Click(object sender, EventArgs e)
+        {
+            db.DeleteUser(Int32.Parse(id7.Text));
+            loadBtn_Click(null, null);
+        }
+
+        private void del8_Click(object sender, EventArgs e)
+        {
+            db.DeleteUser(Int32.Parse(id8.Text));
+            loadBtn_Click(null, null);
+        }
+
+        private void del9_Click(object sender, EventArgs e)
+        {
+            db.DeleteUser(Int32.Parse(id9.Text));
+            loadBtn_Click(null, null);
+        }
+
+        private void del10_Click(object sender, EventArgs e)
+        {
+            db.DeleteUser(Int32.Parse(id10.Text));
+            loadBtn_Click(null, null);
+        }
+
+        private void searchID_Enter(object sender, EventArgs e)
+        {
+            searchID.Text = "";
+            searchID.ForeColor = Color.Black;
+        }
+
+        private void searchID_Leave(object sender, EventArgs e)
+        {
+            searchID.Text = "ID";
+            searchID.ForeColor = System.Drawing.SystemColors.ControlDark;
         }
     }
 }

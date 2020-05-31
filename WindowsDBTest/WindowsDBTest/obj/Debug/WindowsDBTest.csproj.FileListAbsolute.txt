@@ -7,3 +7,4 @@ C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\Win
 C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\WindowsDBTest.exe
 C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\WindowsDBTest.pdb
 C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\WindowsDBTest.MainForm.resources
+C:\Users\Tyler\Desktop\devPortfolio\C#\WindowsDBTest\WindowsDBTest\obj\Debug\WindowsDBTest.AddForm.resources
