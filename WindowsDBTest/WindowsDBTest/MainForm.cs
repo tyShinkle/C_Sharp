@@ -319,5 +319,136 @@ namespace WindowsDBTest
             searchUN.Text = "Username";
             searchUN.ForeColor = System.Drawing.SystemColors.ControlDark;
         }
+
+        //update buttons
+        private void save1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.UpdateUser(Int32.Parse(id1.Text),un1.Text,pw1.Text);
+                loadBtn_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void save2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.UpdateUser(Int32.Parse(id2.Text), un2.Text, pw2.Text);
+                loadBtn_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void save3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.UpdateUser(Int32.Parse(id3.Text), un3.Text, pw3.Text);
+                loadBtn_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void save4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.UpdateUser(Int32.Parse(id4.Text), un4.Text, pw4.Text);
+                loadBtn_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void save5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.UpdateUser(Int32.Parse(id5.Text), un5.Text, pw5.Text);
+                loadBtn_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void save6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.UpdateUser(Int32.Parse(id6.Text), un6.Text, pw6.Text);
+                loadBtn_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void save7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.UpdateUser(Int32.Parse(id7.Text), un7.Text, pw7.Text);
+                loadBtn_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void save8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.UpdateUser(Int32.Parse(id8.Text), un8.Text, pw8.Text);
+                loadBtn_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void save9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.UpdateUser(Int32.Parse(id9.Text), un9.Text, pw9.Text);
+                loadBtn_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void save10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                db.UpdateUser(Int32.Parse(id10.Text), un10.Text, pw10.Text);
+                loadBtn_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

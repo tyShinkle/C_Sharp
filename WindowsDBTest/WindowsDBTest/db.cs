@@ -101,6 +101,28 @@ namespace WindowsDBTest
             conn.Close();
         }
 
+        //update user based on id
+        public void UpdateUser(int id, string un, string pw)
+        {
+            connString = ConnStringValue("users");
+
+            conn = new SqlConnection(connString);
+
+            conn.Open();
+
+            SqlCommand command = new SqlCommand("UPDATE userInfo SET un = @un , pw = @pw WHERE id=@id", conn);
+
+            command.Parameters.Add(new SqlParameter("@un", un));
+
+            command.Parameters.Add(new SqlParameter("@pw", pw));
+
+            command.Parameters.Add(new SqlParameter("@id", id));
+
+            command.ExecuteNonQuery();
+
+            conn.Close();
+        }
+
         //search by id
         public void attemptSearch(int id)
         {

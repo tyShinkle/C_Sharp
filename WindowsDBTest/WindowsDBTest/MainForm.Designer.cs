@@ -87,10 +87,10 @@
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchBox = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.searchUN = new System.Windows.Forms.TextBox();
             this.searchID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.searchBox.SuspendLayout();
             this.SuspendLayout();
@@ -371,6 +371,7 @@
             this.save1.TabIndex = 35;
             this.save1.Text = "Save";
             this.save1.UseVisualStyleBackColor = true;
+            this.save1.Click += new System.EventHandler(this.save1_Click);
             // 
             // del2
             // 
@@ -390,6 +391,7 @@
             this.save2.TabIndex = 37;
             this.save2.Text = "Save";
             this.save2.UseVisualStyleBackColor = true;
+            this.save2.Click += new System.EventHandler(this.save2_Click);
             // 
             // del3
             // 
@@ -409,6 +411,7 @@
             this.save3.TabIndex = 39;
             this.save3.Text = "Save";
             this.save3.UseVisualStyleBackColor = true;
+            this.save3.Click += new System.EventHandler(this.save3_Click);
             // 
             // del4
             // 
@@ -428,6 +431,7 @@
             this.save4.TabIndex = 41;
             this.save4.Text = "Save";
             this.save4.UseVisualStyleBackColor = true;
+            this.save4.Click += new System.EventHandler(this.save4_Click);
             // 
             // del5
             // 
@@ -447,6 +451,7 @@
             this.save5.TabIndex = 43;
             this.save5.Text = "Save";
             this.save5.UseVisualStyleBackColor = true;
+            this.save5.Click += new System.EventHandler(this.save5_Click);
             // 
             // del6
             // 
@@ -466,6 +471,7 @@
             this.save6.TabIndex = 45;
             this.save6.Text = "Save";
             this.save6.UseVisualStyleBackColor = true;
+            this.save6.Click += new System.EventHandler(this.save6_Click);
             // 
             // del7
             // 
@@ -485,6 +491,7 @@
             this.save7.TabIndex = 47;
             this.save7.Text = "Save";
             this.save7.UseVisualStyleBackColor = true;
+            this.save7.Click += new System.EventHandler(this.save7_Click);
             // 
             // del8
             // 
@@ -504,6 +511,7 @@
             this.save8.TabIndex = 49;
             this.save8.Text = "Save";
             this.save8.UseVisualStyleBackColor = true;
+            this.save8.Click += new System.EventHandler(this.save8_Click);
             // 
             // del9
             // 
@@ -523,6 +531,7 @@
             this.save9.TabIndex = 51;
             this.save9.Text = "Save";
             this.save9.UseVisualStyleBackColor = true;
+            this.save9.Click += new System.EventHandler(this.save9_Click);
             // 
             // del10
             // 
@@ -542,6 +551,7 @@
             this.save10.TabIndex = 53;
             this.save10.Text = "Save";
             this.save10.UseVisualStyleBackColor = true;
+            this.save10.Click += new System.EventHandler(this.save10_Click);
             // 
             // addBtn
             // 
@@ -590,6 +600,24 @@
             this.searchBox.TabStop = false;
             this.searchBox.Text = "Search";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(156, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Username:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "ID:";
+            // 
             // searchUN
             // 
             this.searchUN.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -613,24 +641,6 @@
             this.searchID.TextChanged += new System.EventHandler(this.searchID_TextChanged);
             this.searchID.Enter += new System.EventHandler(this.searchID_Enter);
             this.searchID.Leave += new System.EventHandler(this.searchID_Leave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "ID:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(156, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Username:";
             // 
             // MainForm
             // 
