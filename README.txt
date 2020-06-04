@@ -50,13 +50,11 @@
 			loads a tables with data from said database.
 
 		To Do: 
-			edit row buttons
 			error catching 
 			comments / decoupling
 			test 
 				input un and pw
 					receive id
-			next button / back button
 			clean code
 			clean interface
 			generic db class.

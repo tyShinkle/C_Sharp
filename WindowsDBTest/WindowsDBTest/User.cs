@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsDBTest
 {
-    class User
+    public class User
     {
         public int id;
         public string un;

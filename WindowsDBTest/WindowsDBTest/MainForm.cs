@@ -17,6 +17,8 @@ namespace WindowsDBTest
         DB db = new DB();
         TextBox[] textBoxes = new TextBox[30];
 
+        int page = 0;
+
         //load form
         public MainForm()
         {
@@ -27,6 +29,13 @@ namespace WindowsDBTest
         //load and data and call method to display it.
         public void loadBtn_Click(object sender, EventArgs e)
         {
+            //if load button was clicked start from first page.
+            if (sender == loadBtn)
+            {
+                page = 0;
+            }
+
+            //otherwise reload data without changing pages and display it.
             try
             {
                 db.LoadData("users");
@@ -41,7 +50,7 @@ namespace WindowsDBTest
 
         //Should only display 10 users and refernce the index within
         //the users list.
-        private void DisplayData(List<User> list)
+        public void DisplayData(List<User> list)
         {
             //clear text
             for (int i = 0; i < 30; i++)
@@ -49,13 +58,21 @@ namespace WindowsDBTest
                 textBoxes[i].Text = "";
             }
 
-            //either fill all 10 rows or display all users.
-            for (int i = 0; i < 10 && i < list.Count(); i++)
+            try
             {
-                textBoxes[0+(i*3)].Text = list[i].id.ToString();
-                textBoxes[1+(i*3)].Text = list[i].un;
-                textBoxes[2+(i*3)].Text = list[i].pw;
+                //either fill all 10 rows or display all users.
+                for (int i = 0; i < 10 && i < list.Count(); i++)
+                {
+                    textBoxes[0 + (i * 3)].Text = list[i + page * 10].id.ToString();
+                    textBoxes[1 + (i * 3)].Text = list[i + page * 10].un;
+                    textBoxes[2 + (i * 3)].Text = list[i + page * 10].pw;
+                }
             }
+            catch
+            {
+                return;
+            }
+
         }
 
         //place text boxes in array
@@ -449,6 +466,18 @@ namespace WindowsDBTest
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            page++;
+            DisplayData(db.users);
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            page--;
+            DisplayData(db.users);
         }
     }
 }

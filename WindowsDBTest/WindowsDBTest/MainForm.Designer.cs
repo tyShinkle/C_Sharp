@@ -91,6 +91,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.searchUN = new System.Windows.Forms.TextBox();
             this.searchID = new System.Windows.Forms.TextBox();
+            this.nextBtn = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.searchBox.SuspendLayout();
             this.SuspendLayout();
@@ -642,11 +644,33 @@
             this.searchID.Enter += new System.EventHandler(this.searchID_Enter);
             this.searchID.Leave += new System.EventHandler(this.searchID_Leave);
             // 
+            // nextBtn
+            // 
+            this.nextBtn.Location = new System.Drawing.Point(257, 426);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(75, 23);
+            this.nextBtn.TabIndex = 57;
+            this.nextBtn.Text = ">>";
+            this.nextBtn.UseVisualStyleBackColor = true;
+            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
+            // 
+            // backBtn
+            // 
+            this.backBtn.Location = new System.Drawing.Point(19, 426);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(75, 23);
+            this.backBtn.TabIndex = 58;
+            this.backBtn.Text = "<<";
+            this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 429);
+            this.ClientSize = new System.Drawing.Size(514, 465);
+            this.Controls.Add(this.backBtn);
+            this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.save10);
@@ -782,6 +806,8 @@
         private System.Windows.Forms.TextBox searchID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button nextBtn;
+        private System.Windows.Forms.Button backBtn;
     }
 }
 
